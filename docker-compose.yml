@@ -24,7 +24,12 @@ services:
             - ASPNETCORE_URLS=http://+:80
         networks:
             - docker-network
+        volumes:
+            - docker-logs:/app/logs
 
 networks:
     docker-network:
         name: docker-network
+volumes:
+    docker-logs:
+        name: docker-logs

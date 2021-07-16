@@ -48,3 +48,9 @@ docker image prune -a
 
 openssl s_client -connect localhost:443
 openssl pkcs12 -in keystore_name.p12 -nodes -nocerts -out private.key
+
+
+cat Docker.Api20210716.txt
+docker volume ls
+docker volume inspect docker-logs 2b32d6af0aea8b8a8e0dbdaf0994bd2f4cec816c9bff70a20f8207c2fbea96c8
+\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
