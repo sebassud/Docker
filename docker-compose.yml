@@ -1,0 +1,30 @@
+version: "3.5"
+
+services:
+    docker-web:
+        image: docker-web
+        restart: always
+        build:
+            context: frontend/Web
+            dockerfile: Dockerfile
+        ports:
+            - 80:80
+            - 443:443
+        networks:
+            - docker-network
+
+    docker-api:      
+        image: docker-api
+        restart: always
+        build:
+            context: backend/Api
+            dockerfile: Api/Dockerfile
+        environment:
+            - ASPNETCORE_App__Welcome=Elo mordo
+            - ASPNETCORE_URLS=http://+:80
+        networks:
+            - docker-network
+
+networks:
+    docker-network:
+        name: docker-network
