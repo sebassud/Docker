@@ -51,12 +51,12 @@ namespace Api
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api v1"));
+
+                app.UseCors(b => b.AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader());
             }
-
-            //app.UseCors(b => b.AllowAnyOrigin()
-            //                    .AllowAnyMethod()
-            //                    .AllowAnyHeader());
-
+         
             //app.UseHttpsRedirection();
 
             app.UseRouting();

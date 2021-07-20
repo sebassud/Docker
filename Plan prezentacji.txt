@@ -1,0 +1,13 @@
+Plan prezentacji:
+0) Przedstawienie projektu
+1) Generowanie obrazu API: cashowanie, ignore, visual, context
+2) Utworzenie kontenera: zmienne środowiskowe, mapowanie portu
+3) Generowanie obrazu frontend
+4) Utworzenie kontenera: nginx, domyślny config
+5) Połączenie sieciowe
+6) Reverproxy konfiguracji nginx
+7) Docker compose polecenia
+8) Https certyfikaty
+9) Volume
+10 Scale, load-balancer
+11) Kubernetes
