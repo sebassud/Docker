@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-console-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: docker-console
+  template:
+    metadata:
+      labels:
+        app: docker-console
+    spec:
+      containers:
+        - image: docker-console:console
+          name: docker-console

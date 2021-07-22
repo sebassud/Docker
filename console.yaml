@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: docker-namespace
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: docker-console
+  namespace: docker-namespace
+spec:
+  containers:
+    - image: docker-console:console
+      name: docker-console

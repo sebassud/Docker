@@ -1,0 +1,13 @@
+docker build . -f ConsoleApp/Dockerfile -t docker-console:console
+https://www.dotnetcurry.com/aspnet-core/kubernetes-for-developers
+kubernetes = k8s
+
+kubectl apply -f console.yaml
+kubectl get pods -n docker-namespace 
+kubectl delete pod docker-console
+kubectl logs docker-console
+kubectl get namespaces
+
+kubectl get deployment
+kubectl apply -f console_deployment.yaml
+kubectl describe pod docker-console-deployment
