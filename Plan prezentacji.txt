@@ -11,3 +11,17 @@ Plan prezentacji:
 9) Volume
 10 Scale, load-balancer
 11) Kubernetes
+
+Cześć zapraszam wszystkich na warszaty dockerowe, które odbędą się 23.07.2021 (piątek) o godzinie 12:00.
+Warsztaty potrwają pewnie maksymalnie do 13:15-13:30. Prośba o zainstalowanie docker desktopa (w nim w ustawieniach zainstalujcie też kubernetesa).
+Warto tez mieć vscode z zainstalowanym extension docker i kubernetes, ale nie jest to wymagane, zwykła konsola i notepad wystarczy ;).
+Celem warsztatów będzie wdrożenie wcześnie przygotowanej przezemnie aplikacji webowej w postaci kontenerów i konfiguracja ich.
+Umiejętności nabyte podczaas warsztatów:
+- budowa obrazu
+- budowa i konfiguracja kontenera
+- utworzenie sieci mędzy kontenerami
+- utworzenie wolumenu
+- konfiguracja ningx
+- docker.compose
+- Skalowanie kontenerów
+- Wstępne informacje o kubernetesie (wprowadzenie do kolejnych warsztatów które będą z kubernetesa)

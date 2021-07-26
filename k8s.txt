@@ -11,3 +11,17 @@ kubectl get namespaces
 kubectl get deployment
 kubectl apply -f console_deployment.yaml
 kubectl describe pod docker-console-deployment
+kubectl delete deployment docker-console-deployment
+
+
+docker build . -f Api/Dockerfile -t k8s-api:api
+kubectl apply -f k8s-website.yml
+kubectl describe pod k8s-api-deployment-65c7d85454-wkf7j
+kubectl expose deployment k8s-api-deployment --port=80 --type=NodePort
+
+kubectl delete deployment k8s-api-deployment
+kubectl delete service k8s-api-service
+kubectl delete service k8s-api-deployment
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/cloud/deploy.yaml
+
+docker build . -t k8s-web:web
